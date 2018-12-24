@@ -23,6 +23,7 @@ class Header extends React.Component {
   onMenuClick(e) {
     const { key } = e;
     const { history } = this.props;
+    if (key === 'code') { return window.open('http://blog.leanote.com/957638221@qq.com'); }
     const current = this.setCurrentByPath();
     if (current !== key) { return history.push(key); }
     return false;
