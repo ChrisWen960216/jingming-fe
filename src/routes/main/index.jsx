@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Button } from 'antd';
 import Header from '../../components/header';
+import Slogan from '../../components/slogan';
 
 class Main extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Main extends React.Component {
     return (
       <div className="main">
         <Header />
-        <Button type="primary">Hello world</Button>
+        <Slogan />
       </div>
     );
   }
