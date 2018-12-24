@@ -12,22 +12,18 @@ class Header extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      current: '/',
-    };
+    this.state = {};
     this.onMenuClick = this.onMenuClick.bind(this);
     this.setCurrentByPath = this.setCurrentByPath.bind(this);
   }
 
 
-  componentDidMount() {
-    this.setCurrentByPath();
-  }
+  componentDidMount() {}
 
   onMenuClick(e) {
     const { key } = e;
     const { history } = this.props;
-    const { current } = this.state;
+    const current = this.setCurrentByPath();
     if (current !== key) { return history.push(key); }
     return false;
   }
@@ -36,12 +32,12 @@ class Header extends React.Component {
     const { location: { pathname } } = this.props;
     const pathNames = pathname.split('/');
     const current = pathNames[1] || '/';
-    this.setState({ current });
+    return current;
   }
 
 
   render() {
-    const { current } = this.state;
+    const current = this.setCurrentByPath();
     return (<HeaderComponent current={current} onMenuClick={this.onMenuClick} />);
   }
 }
