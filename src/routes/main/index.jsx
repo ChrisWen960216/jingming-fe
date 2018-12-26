@@ -15,7 +15,8 @@ class Main extends React.Component {
       <div className="main">
         <Header />
         <Slogan />
-        <Articles />
+        <Articles title="景 · 明" desc="我们的故事，从这里开始" link="article" />
+        <Articles title="你好 · 世界" desc="代码的初啼，从此便有了灵魂" />
       </div>
     );
   }
