@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Menu } from 'antd';
 import PropTypes from 'prop-types';
-import './Header.less';
+import './Header.scss';
 
 const { SubMenu } = Menu;
 

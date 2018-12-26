@@ -1,7 +1,8 @@
+@import '../../common.scss';
+
 header{
-  @media (max-width:767px) {
+  @include phone{
     position: absolute;
     width: 100%;
   }
-
 }
