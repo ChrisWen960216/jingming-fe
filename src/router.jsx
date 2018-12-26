@@ -1,22 +1,40 @@
 import React from 'react';
-import propTypes from 'prop-types';
-import { Router, Route, Switch } from 'dva/router';
-import MainPage from './routes/main';
-import ArticlePage from './routes/article';
+import PropTypes from 'prop-types';
+import { Router, Switch, Route } from 'dva/router';
+import dynamic from 'dva/dynamic';
 
-function RouterConfig({ history }) {
+// const cached = {};
+// function registerModel(app, model) {
+//   if (!cached[model.namespace]) {
+//     app.model(model);
+//     cached[model.namespace] = 1;
+//   }
+// }
+
+function RouterConfig({ history, app }) {
+  const MainPage = dynamic({
+    app,
+    component: () => import('./routes/main'),
+  });
+
+  const ArticlePage = dynamic({
+    app,
+    component: () => import('./routes/article'),
+  });
+
   return (
     <Router history={history}>
       <Switch>
         <Route path="/" exact component={MainPage} />
-        <Route path="/code" exact component={ArticlePage} />
+        <Route path="/article" exact component={ArticlePage} />
       </Switch>
     </Router>
   );
 }
 
 RouterConfig.propTypes = {
-  history: propTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+  app: PropTypes.object.isRequired,
 };
 
 export default RouterConfig;

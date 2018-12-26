@@ -1,13 +1,13 @@
 {
     "extends": "airbnb",
-    "env":{
+    "parser": "babel-eslint",
+    "env": {
         "browser": true,
         "node": true
     },
     "rules": {
-        "no-console": 0,
-        "react/forbid-prop-types": 0,
-        "jsx-a11y/href-no-hash": 0
-    },
-    "parser": "babel-eslint"
+        "no-console":"off" ,
+        "jsx-a11y/href-no-hash": "off",
+        "react/forbid-prop-types": "off"
+    }
 }

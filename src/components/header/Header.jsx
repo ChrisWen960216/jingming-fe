@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Row, Col, Menu,
-} from 'antd';
+import { Row, Col, Menu } from 'antd';
 import PropTypes from 'prop-types';
 import './Header.less';
 
@@ -35,7 +33,7 @@ export default class Main extends React.Component {
               <Menu.Item key="/">首页</Menu.Item>
               <SubMenu title="Blog">
                 <Menu.Item key="code">Code</Menu.Item>
-                <Menu.Item key="article" disabled>Article</Menu.Item>
+                <Menu.Item key="article">Article</Menu.Item>
               </SubMenu>
               <Menu.Item key="project" disabled>景明</Menu.Item>
               <Menu.Item key="about" disabled>关于</Menu.Item>
