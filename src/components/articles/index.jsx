@@ -4,6 +4,10 @@ import { withRouter } from 'dva/router';
 import ArticlesComponent from './Articles';
 
 class Articles extends React.Component {
+  static navToBlogs() {
+    return window.open('http://blog.leanote.com/957638221@qq.com');
+  }
+
   static propTypes = {
     title: PropTypes.string,
     desc: PropTypes.any,
@@ -15,15 +19,21 @@ class Articles extends React.Component {
     super(props);
     this.state = {};
     this.onDescClick = this.onDescClick.bind(this);
+    this.navToInside = this.navToInside.bind(this);
   }
+
 
   onDescClick() {
     const { link, match: { path } } = this.props;
-    if (path !== link) {
-      return this.props.history.push(link);
-    }
+    if (link === 'blogs') { return Articles.navToBlogs(); }
+    if (path !== link) { return this.navToInside(link); }
     return false;
   }
+
+  navToInside(link) {
+    return this.props.history.push(link);
+  }
+
 
   render() {
     const { link, ...otherProps } = this.props;
