@@ -1,0 +1,10 @@
+# packages
+node_modules
+
+# cache
+static
+dist
+.next
+
+# localTest
+_test_

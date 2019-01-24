@@ -1,0 +1,38 @@
+{
+  "name": "jingming-fe",
+  "version": "1.0.0",
+  "description": "基于next搭建的个人网站",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next -p 9593",
+    "build": "next build",
+    "start": "next start",
+    "server":"next build && next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisWen960216/jingming-fe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisWen960216/jingming-fe/issues"
+  },
+  "homepage": "https://github.com/ChrisWen960216/jingming-fe#readme",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "next": "^7.0.2",
+    "node-sass": "^4.11.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}
