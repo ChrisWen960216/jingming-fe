@@ -1,8 +1,0 @@
-@import '../../common.scss';
-
-header{
-  @include phone{
-    position: absolute;
-    width: 100%;
-  }
-}
